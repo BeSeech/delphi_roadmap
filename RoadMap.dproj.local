@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.725,R:\Projects\BeRoad\Unit1.pas=R:\Projects\BeRoad\uSettings.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.120,=R:\Projects\BeRoad\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.743,R:\Projects\BeRoad\Unit1.pas=R:\Projects\BeRoad\uSetKey.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.850,=R:\Projects\BeRoad\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.469,=R:\Projects\BeRoad\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.148,=R:\Projects\BeRoad\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.751,=R:\Projects\BeRoad\nativexml\nativexml\NativeXml.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.261,=C:\Users\BeSeech\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.053,=C:\Users\BeSeech\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.206,=R:\Projects\BeRoad\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.902,=R:\Projects\BeRoad\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.083,=R:\Projects\BeRoad\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.619,R:\Projects\BeRoad\Unit1.pas=R:\Projects\BeRoad\UTouchPoint.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.391,R:\Projects\BeRoad\nativexml\general\sdDebug.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.310,R:\Projects\BeRoad\uMain.pas=C:\Users\BeSeech\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.310,R:\Projects\BeRoad\uMain.dfm=C:\Users\BeSeech\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.983,=R:\Projects\BeRoad\nativexml\nativexml\sdStringTable.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.073,=L:\Projects\BeRoad_2\UIssueStatistic.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.637,=R:\Projects\BeRoad\nativexml\general\sdDebug.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.809,=L:\Projects\BeRoad\GDIPlus\GDIPUTIL.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.948,R:\Projects\BeRoad\Unit1.pas=R:\Projects\BeRoad\uDrawContext.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.707,R:\Projects\BeRoad\Unit1.pas=R:\Projects\BeRoad\uBeColumn.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.725,R:\Projects\BeRoad\Unit1.dfm=R:\Projects\BeRoad\uSettings.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.743,R:\Projects\BeRoad\Unit1.dfm=R:\Projects\BeRoad\uSetKey.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.414,L:\Projects\BeRoad\BeRoad.dproj=L:\Projects\BeRoad\RoadMap.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.915,L:\Projects\BeRoad\uDrawContext.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.602,=R:\Projects\BeRoad\nativexml\nativexml\sdDebug.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.329,=L:\Projects\BeRoad\uAppInfo.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.649,=L:\Projects\BeRoad\GDIPlus\DirectDraw.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.509,R:\Projects\BeRoad\BeRoad.dproj=C:\Users\BeSeech\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.188,L:\Projects\BeRoad\uDrawContext.pas=L:\Projects\BeRoad\uContext.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.184,L:\Projects\BeRoad\uContext.pas=L:\Projects\BeRoad\uDrawContext.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.375,=C:\Users\BeSeech\Documents\RAD Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.630,=L:\Projects\BeRoad\uDialogs.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.021,=R:\Projects\BeRoad\nativexml\nativexml\sdStreams.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.827,=L:\Projects\BeRoad\GDIPlus\GDIPOBJ_Evos.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.075,=L:\Projects\BeRoad\uContext.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.443,=L:\Projects\BeRoad\GDIPlus\GDIPAPI_Evos.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.617,R:\Projects\BeRoad\uQuestion.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.362,=L:\Projects\BeRoad\URoadMapIntegrationConst.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.130,=L:\Projects\BeRoad\USendStrToOtherApp.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.859,R:\Projects\BeRoad\uQuestion.dfm=R:\Projects\BeRoad\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.157,R:\Projects\BeRoad\uBeImage.pas=C:\Users\BeSeech\Documents\RAD Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.859,R:\Projects\BeRoad\uQuestion.pas=R:\Projects\BeRoad\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.676,=R:\Projects\BeRoad\ULogin.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.996,=R:\Projects\BeRoad\nativexml\general\sdStreams.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.788,R:\Projects\BeRoad\nativexml\general\sdStreams.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.498,=L:\Projects\BeRoad\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.690,L:\Projects\BeRoad\uPing.pas=L:\Projects\BeRoad\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.044,=L:\Projects\BeRoad\uUpdater.pas</Transaction>
+  </Transactions>
+</BorlandProject>

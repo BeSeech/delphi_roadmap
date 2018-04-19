@@ -1,0 +1,119 @@
+function TfMain.GetResponse(const URL: string): string;
+var
+  HTTP: TIdHttp;
+  s: TStringStream;
+begin
+  Result := EmptyStr;
+
+  HTTP := TIdHttp.Create(nil);
+  s := TStringStream.Create(Result);
+  ShowWait;
+  try
+    HTTP.Request.ContentType := 'application/json';
+    HTTP.Request.Accept := 'application/json';
+    HTTP.Request.ContentEncoding := 'utf-8';
+    HTTP.IOHandler := IdSSLIOHandlerSocketOpenSSL1;
+    HTTP.HandleRedirects := True;
+    HTTP.AllowCookies := True;
+    HTTP.Request.BasicAuthentication := True;
+    HTTP.Request.Username := Login;
+    HTTP.Request.Password := Password;
+    HTTP.Request.UserAgent :=
+      'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705;)';
+
+    HTTP.Get(URL, s);
+    s.Position := 0;
+    Result := s.ReadString(s.Size);
+  finally
+    HideWait;
+    FreeAndNil(s);
+    FreeAndNil(HTTP);
+  end;
+end;
+
+function TfMain.GetStatus(const AKey: string): string;
+var
+  s: string;
+  j: TJSONObject;
+  Request: string;
+begin
+  Request := 'https://estream.atlassian.net/rest/api/2/issue/' + AKey +
+    '?fields=status';
+  Request := IdURI.TIdURI.URLEncode(Request);
+  s := UTF8ToString(GetResponse(Request));
+  try
+    j := TJSONObject.ParseJSONValue(s) as TJSONObject;
+  except
+    raise Exception.Create('Не ок');
+  end;
+  if not Assigned(j) then
+  begin
+    raise Exception.Create('Не ок');
+  end;
+  j := j.GetValue('fields') as TJSONObject;
+  j := j.GetValue('status') as TJSONObject;
+  Result := BeClear(j.GetValue('name').ToString);
+end;
+
+function TfMain.LoadIssueFromJiraByKey(AOwner: TComponent;
+  const AKey: string): TIssueR;
+var
+  i: integer;
+  s: string;
+  j: TJSONObject;
+  jarr: TJSONArray;
+  Request: string;
+begin
+  ShowWait;
+  try
+    if Login = EmptyStr then
+      bLoginClick(Self);
+    if Login = EmptyStr then
+      Exit;
+
+    Result.Key := 'nil';
+    try
+      Request := 'https://estream.atlassian.net/rest/api/2/issue/' + AKey +
+        '?fields=id,key,summary,status,components,' + cMarkerField;
+      Request := IdURI.TIdURI.URLEncode(Request);
+      s := UTF8ToString(GetResponse(Request));
+      j := TJSONObject.ParseJSONValue(s) as TJSONObject;
+
+      Result.Key := BeClear(j.GetValue('key').ToString);
+
+      j := j.GetValue('fields') as TJSONObject;
+      if Assigned(j.Get(cMarkerField)) and
+        (Trim(j.Get(cMarkerField).JsonValue.ToString) <> 'null') then
+        Result.Marker := StringToColor
+          (Trim(j.Get(cMarkerField).JsonValue.ToString))
+      else
+        Result.Marker := clFuchsia;
+
+      Result.link := cBaseBrowse + Result.Key;
+      Result.Summary := BeClear(j.GetValue('summary').ToString);
+
+      jarr := TJSONObject.ParseJSONValue(j.Get('components').JsonValue.ToString)
+        as TJSONArray;
+
+      j := j.GetValue('status') as TJSONObject;
+      Result.status := BeClear(j.GetValue('name').ToString);
+
+      Result.components := EmptyStr;
+      if Assigned(jarr) then
+      begin
+        for i := 0 to jarr.Size - 1 do
+        begin
+          if Result.components <> EmptyStr then
+            Result.components := Result.components + ', ';
+          Result.components := Result.components + TJSONObject(jarr.Get(i))
+            .Get('name').JsonValue.ToString;
+        end;
+      end;
+      Result.components := BeClear(Result.components);
+    except
+      Result.Key := 'nil';
+    end;
+  finally
+    HideWait;
+  end;
+end;
